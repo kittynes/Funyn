@@ -1,0 +1,18 @@
+ballon = true -- Включаем режим
+
+        	local Workspace = game:GetService("Workspace")
+
+        	while ballon do -- Проверяем, включен ли режим
+            	local balloon = Workspace:FindFirstChild("Balloon")
+    
+            	if balloon then
+                	balloon:Destroy() -- Удаляет объект Balloon из Workspace
+                	print("Balloon был найден и удален.")
+            	end
+    
+            	wait(1) -- Ждет 1 секунду перед следующей проверкой
+        	end
+    	else
+        	ballon = false -- Выключаем режим
+    	end
+	end
